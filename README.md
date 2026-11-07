@@ -43,6 +43,10 @@ Sistema desenvolvido em Python para automatizar cálculos de vendas, custos, luc
 
 Os produtos e valores utilizados são fictícios e destinados à demonstração do funcionamento do sistema.
 
+## Exemplo do relatório gerado
+
+![Relatório de Vendas](imagens/relatorio.png)
+
 ## Autor
 
 David de Brito Alves
