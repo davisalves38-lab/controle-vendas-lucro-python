@@ -1,6 +1,19 @@
-# Controle de Vendas e Lucro
+# Controle de Vendas e Lucro | Automação com Python e Excel
 
-Sistema desenvolvido em Python para automatizar cálculos de vendas, custos, lucro bruto e margem de lucro, com geração de relatórios em Excel.
+Sistema desenvolvido em Python para automatizar cálculos financeiros e gerar relatórios de vendas em Excel, facilitando o acompanhamento dos resultados de um negócio.
+
+## Objetivo do projeto
+
+Demonstrar como a automação pode simplificar o controle de vendas, reduzir cálculos manuais e organizar informações financeiras em relatórios.
+
+O sistema calcula faturamento, custos, lucro bruto e margem de lucro, além de gerar uma planilha Excel formatada com os resultados.
+
+## Aplicações para empresas
+
+- Controle de faturamento e custos de produtos
+- Acompanhamento de lucro e margem de lucro
+- Automatização de relatórios comerciais
+- Organização de informações para análise de resultados
 
 ## Funcionalidades
 
