@@ -4,6 +4,8 @@ from openpyxl import Workbook
 from calcular import calcular_lucro, calcular_custo, calcular_faturamento, calcular_margem_lucro
 from formatacao import azul, branco, borda, alinhar
 from openpyxl.utils import get_column_letter
+from ler_vendas import carregar_vendas
+
 
 planilha = Workbook()
 aba = planilha.active
@@ -30,15 +32,7 @@ for numero in range(1, aba.max_column + 1):
     else:
         aba.column_dimensions[coluna].width = 15
 
-vendas = [
-    ["Arroz 5kg", 20, 15.00, 22.00],
-    ["Feijão 1 kg", 15, 5.50, 8.90],
-    ["Café 500g", 10, 12.00, 18.50],
-    ["Açúcar 1kg", 25, 3.20, 4.99],
-    ["Leite 1L", 0, 3.50, 5.99],
-    ["Macarrão 500g", 12, 4.00, -6.50],
-    ["Óleo 900ml", 8, 0, 9.90]
-]
+vendas = carregar_vendas(pasta_exemplos / "vendas.xlsx")
 
 quantidade_total = 0
 faturamento_total = 0
