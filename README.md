@@ -85,9 +85,15 @@ Apresenta os produtos que não passaram pelas validações, indicando o motivo d
 
 Atualmente, o sistema verifica quantidades e preços menores ou iguais a zero. Validações de células vazias e valores não numéricos estão previstas para futuras versões.
 
-## Exemplo do relatório gerado
+## Exemplos dos relatórios gerados
+
+### Relatório de Vendas
 
 ![Relatório de Vendas](imagens/relatorio.png)
+
+### Registros Rejeitados
+
+![Registros Rejeitados](imagens/registros_rejeitados.png)
 
 ## Observações
 
