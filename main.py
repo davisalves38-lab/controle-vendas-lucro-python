@@ -54,20 +54,36 @@ faturamento_total = 0
 custo_bruto = 0
 lucro_bruto_total = 0
 
+campos = {
+    "Quantidade": "invalida",
+    "preco_unitario": "inválido",
+    "preco_venda": "inválido"
+}
+
 
 for produto, quantidade, preco_unitario, preco_venda  in vendas:
+
+    valores = [quantidade, preco_unitario, preco_venda]
+
+    if not all(isinstance(valor, (int, float)) for valor in valores):
+        for campo, valor in zip(campos, valores):
+            if not isinstance(valor, (int, float)):
+                print(f"\nProduto: {produto} - {campo} {campos[campo]} ({valor}).")
+                aba_rejeitados.append([produto, f"{campo} {campos[campo]} ({valor})."])
+        continue
+
     if quantidade <= 0:
         print(f"\nProduto: {produto} - Quantidade inválida ({quantidade}).")
         aba_rejeitados.append([produto, f"Quantidade inválida ({quantidade})"])
         continue
 
     elif preco_unitario <= 0:
-        print(f"Produto: {produto} - Preço unitário inválido (R${preco_unitario:.2f}).")
+        print(f"\nProduto: {produto} - Preço unitário inválid (R${preco_unitario:.2f}).")
         aba_rejeitados.append([produto, f"Preço unitário inválido (R${preco_unitario:.2f})"])
         continue
 
     elif preco_venda <= 0:
-        print(f"Produto: {produto} - Preço de venda inválido (R${preco_venda:.2f}).")
+        print(f"\nProduto: {produto} - Preço de venda inválido (R${preco_venda:.2f}).")
         aba_rejeitados.append([produto, f"Preço de venda inválido (R${preco_venda:.2f})"])
         continue
 
